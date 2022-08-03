@@ -14,7 +14,7 @@ const NavBar: FC = () => {
     }
     return (
         <View style={styles.navbar}>
-                <Image style={{width: 70, height: 63, marginLeft: 15}}
+                <Image style={styles.logo}
                        source={require('../../img/logo.png')}/>
                 {isAuth &&
                 <TouchableOpacity onPress={() => logout()}>

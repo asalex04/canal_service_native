@@ -5,10 +5,12 @@ export const styles = StyleSheet.create({
         display: "flex",
         justifyContent: "center",
         alignItems: "flex-start",
-        margin: 15,
+        margin: 10,
+        marginTop: 0,
         borderColor: '#27569C',
         borderStyle: "solid",
         borderWidth: 5,
+        borderRadius: 6,
         paddingVertical: 10
     },
 

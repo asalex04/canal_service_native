@@ -1,5 +1,5 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {IAdmin} from "../../../types";
+import {IAdmin} from "../../types";
 
 interface IState {
     isAuth: boolean
@@ -11,8 +11,8 @@ export const initialState: IState = {
     isAuth: false,
     user: '',
     admin: {
-        login: 'a',
-        password: 'r'
+        login: 'admin',
+        password: 'root'
     }
 }
 

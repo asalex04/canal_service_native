@@ -9,7 +9,12 @@ export const styles = StyleSheet.create({
         height: 120,
         justifyContent: "space-between",
         alignItems: "center",
-        marginTop: 30,
+        marginTop: 30
+    },
+    logo: {
+        width: 70,
+        height: 63,
+        marginLeft: 15
     },
     logo_exit: {
         marginRight: 15

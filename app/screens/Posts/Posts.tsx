@@ -3,8 +3,9 @@ import {fetchPosts, fetchUsers} from "../../api/postsApi";
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import {getPosts, getUsers} from "../../store/reducers/PostSlice";
 import Post from "../../components/Post/Post";
-import {Item} from "../../../types";
-import {ActivityIndicator, StyleSheet, ScrollView, View, StatusBar} from "react-native";
+import {Item} from "../../types";
+import {ActivityIndicator, ScrollView, View} from "react-native";
+import {styles} from "./styles";
 
 function randomInteger(min: number, max: number) {
     let rand = min + Math.random() * (max + 1 - min);
@@ -59,19 +60,5 @@ const Posts = () => {
     );
 };
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center"
-    },
-    horizontal: {
-        flexDirection: "row",
-        justifyContent: "space-around",
-        padding: 10
-    },
-    scrollView: {
-        paddingTop: StatusBar.currentHeight
-    }
 
-})
 export default Posts;

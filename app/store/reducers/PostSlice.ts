@@ -1,5 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {IPost, IUser} from "../../../types";
+import {IPost, IUser} from "../../types";
 
 export interface IState {
     posts: IPost[]
@@ -20,12 +20,6 @@ export const postSlice = createSlice({
         },
         getUsers(state, action: PayloadAction<IUser[]>) {
             state.users = action.payload
-        },
-        addPost(state, action: PayloadAction<IPost>) {
-            state.posts.push(action.payload)
-        },
-        deletePost(state, action: PayloadAction<number>){
-            state.posts.filter(post => post.id !== action.payload)
         }
     }
 })
