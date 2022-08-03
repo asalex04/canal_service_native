@@ -4,8 +4,7 @@ import {setIsAuth} from "../../store/reducers/UserSlice";
 import {Image, Pressable, Text, TextInput, View} from "react-native";
 import {styles} from "./styles";
 
-const Login = () => {
-    // const navigate = useNavigate()
+const Login = ({navigation}) => {
     const [login, setLogin] = useState('')
     const [password, setPassword] = useState('')
     const {login: l, password: p} = useAppSelector(state => state.user.admin)
@@ -14,8 +13,7 @@ const Login = () => {
     const auth = async () => {
         if (login === l && password === p) {
             dispatch(setIsAuth(true))
-            console.log('BOOM')
-            // navigate('/posts')
+            navigation.navigate('posts')
         } else {
             alert('Wrong login or password')
         }

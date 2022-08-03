@@ -1,16 +1,14 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {IPhoto, IPost, IUser} from "../../../types";
+import {IPost, IUser} from "../../../types";
 
 export interface IState {
     posts: IPost[]
     users: IUser[]
-    photos: IPhoto[]
 }
 
 const initialState: IState = {
     posts: [],
     users: [],
-    photos: []
 }
 
 export const postSlice = createSlice({
@@ -23,9 +21,6 @@ export const postSlice = createSlice({
         getUsers(state, action: PayloadAction<IUser[]>) {
             state.users = action.payload
         },
-        getPhotos(state, action: PayloadAction<IPhoto[]>) {
-            state.photos = action.payload
-        },
         addPost(state, action: PayloadAction<IPost>) {
             state.posts.push(action.payload)
         },
@@ -35,5 +30,5 @@ export const postSlice = createSlice({
     }
 })
 
-export const {getPosts, getUsers, getPhotos} = postSlice.actions
+export const {getPosts, getUsers} = postSlice.actions
 export default postSlice.reducer

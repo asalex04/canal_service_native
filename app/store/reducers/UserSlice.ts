@@ -11,8 +11,8 @@ export const initialState: IState = {
     isAuth: false,
     user: '',
     admin: {
-        login: 'admin',
-        password: 'root'
+        login: 'a',
+        password: 'r'
     }
 }
 
